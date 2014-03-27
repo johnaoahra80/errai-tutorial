@@ -19,6 +19,7 @@ import org.jboss.errai.ui.shared.api.annotations.Templated;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.http.client.Response;
+import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
@@ -78,6 +79,10 @@ public class ComplaintForm extends Composite {
   @Inject
   @DataField
   private Button submit;
+  
+  @Inject
+  @DataField("user-complaints")
+  private CellTable<UserComplaint> complaintsTable;
 
   /**
    * Errai's JAX-RS module generates a stub class that makes AJAX calls back to
